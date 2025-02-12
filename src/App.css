@@ -1,26 +1,35 @@
 .App {
-  text-align: center;
+  min-height: 100vh;
 }
 
-.App-header {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 40px 20px;
+.main-content {
+  padding: 2rem;
+}
+
+.hero {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 60px 40px;
   color: white;
-  margin: 20px;
-  border-radius: 15px;
+  margin: 40px 20px;
+  border-radius: 20px;
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
 }
 
-.App-header h1 {
-  margin: 0 0 10px 0;
-  font-size: 3rem;
+.hero h1 {
+  margin: 0 0 20px 0;
+  font-size: 3.5rem;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.App-header p {
+.hero p {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   opacity: 0.9;
 }
