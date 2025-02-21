@@ -29,7 +29,50 @@
 }
 
 .hero p {
-  margin: 0;
+  margin: 0 0 30px 0;
   font-size: 1.4rem;
   opacity: 0.9;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  padding: 16px 32px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-button.primary {
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  color: white;
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button.primary:hover {
+  box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+}
+
+.cta-button.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
