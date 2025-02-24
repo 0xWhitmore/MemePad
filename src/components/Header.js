@@ -2,7 +2,7 @@ import React from 'react';
 import { useWeb3 } from '../contexts/Web3Context';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ onNavigate, currentPage }) => {
   const { account, isConnected, isConnecting, connect } = useWeb3();
 
   const formatAccount = (account) => {
@@ -16,9 +16,18 @@ const Header = () => {
         <h2>🎭 MemePad</h2>
       </div>
       <nav className="nav">
-        <a href="#home">Home</a>
-        <a href="#create">Create</a>
-        <a href="#marketplace">Marketplace</a>
+        <button 
+          className={`nav-link ${currentPage === 'home' ? 'active' : ''}`}
+          onClick={() => onNavigate('home')}
+        >
+          Home
+        </button>
+        <button 
+          className={`nav-link ${currentPage === 'marketplace' ? 'active' : ''}`}
+          onClick={() => onNavigate('marketplace')}
+        >
+          Marketplace
+        </button>
       </nav>
       <div className="wallet-section">
         {isConnected ? (
